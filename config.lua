@@ -1,7 +1,7 @@
 Config = {}
 
-Config.Webhook = true
-Config.WebhookLink = 'https://discord.com/api/webhooks/825337791633948684/6p-NVPxFadsQo5xxhReL4ScuieDMiLH5msL8T07QJWeKURWC3SVHnWBZPDHXIcBu8CSH'
+Config.Webhook = false
+Config.WebhookLink = 'https://discord.com/api/webhooks/123456/6p-asd'
 
 Config.Strings= {
 	['playerleft'] = 'Player left',
