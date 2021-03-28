@@ -105,6 +105,7 @@ AddEventHandler('rgz_playtime:loggedIn', function(playerName)
         TriggerClientEvent('rgz_playtime:notif', _source, Config.Strings['welcome']..'\n'..Config.Strings['ptotaltime']..'~b~'.. totaltimeFormatted ..'~s~\n'..string.format(Config.Strings['loggedin'], playersDataLogged[identifier]))
     else        
         playersDataActuall[identifier] = actuallTime
+        playersData[identifier] = 0
         MySQL.Async.execute('INSERT INTO playtime (identifier, time, login) VALUES (@identifier, @time, @login)',
             { ['identifier'] = identifier, ['time'] = 0, ['login'] = 0},
             function(affectedRows)
