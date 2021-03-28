@@ -4,9 +4,13 @@ function notification(msg)
 	DrawNotification(false, true)
 end
 
+local firstSpawn = false
 
 AddEventHandler('playerSpawned', function()
-	TriggerServerEvent('rgz_playtime:loggedIn', GetPlayerName(PlayerId()))
+	if firstSpawn == false then
+		TriggerServerEvent('rgz_playtime:loggedIn', GetPlayerName(PlayerId()))
+		firstSpawn = true
+	end
 end)
 
 RegisterCommand('time1', function(source)
